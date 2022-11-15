@@ -78,31 +78,39 @@ Project is organised in two phases. First phase works as a proof of concept wher
 Second Phase requires a lot of research between all possible solutions in order to find the best one (best being the one with strongest Web3 use case and expected performance). First phase of implementation is therefore planned as an MVP, a Proof of Concept on which we can then build if it proves to be as demanded as it appears. We are also planning to file a Level 3 grant proposal once Phase 1 is concluded. 
 
 
+What is included in the package: 
+- designs of UI components: #addlink
+- technical backend flow: #addlink 
+- data models #missing
+- overview of technical stack: #addlink 
+-  documentation of core components: #missing 
+- MVP link: #missing 
 
-
-- Mockups/designs of any UI components
-- Data models / API specifications of the core functionality
-- An overview of the technology stack to be used
-- Documentation of core components, protocols, architecture, etc. to be deployed
-- PoC/MVP or other relevant prior work or research on the topic
-- What your project is _not_ or will _not_ provide or implement
-  - This is a place for you to manage expectations and to clarify any limitations that might not be obvious
 
 ### Ecosystem Fit
 
 Help us locate your project in the Polkadot/Substrate/Kusama landscape and what problems it tries to solve by answering each of these questions:
 
-- Where and how does your project fit into the ecosystem?
-- Who is your target audience (parachain/dapp/wallet/UI developers, designers, your own user base, some dapp's userbase, yourself)?
-- What need(s) does your project meet?
-- Are there any other projects similar to yours in the Substrate / Polkadot / Kusama ecosystem?
+
+### Where and how does your project fit into the ecosystem?
+
+Project upgrades the existing DID solution as provided by KILT (ecosystem parachain) with a friction free, yet full Web3 compatible solution, that simplifies DID usage and speeds up DID authentication for all services using DID's, within Polkadot ecosystem, as well as for potential users. Giving simple access to DID's to mass of users, directly affects the adoption of all underlying services on Polkadot. 
+
+### Who is your target audience (parachain/dapp/wallet/UI developers, designers, your own user base, some dapp's userbase, yourself)?
+DID Vault targets all Web3 projects and their users. Anyone developing a Web3 project or a dApp that is planning to use or already using KILT network for identity generation, management and authentication, may integrate DID vault to improve the authentication user experience and immediately speed up the onboarding of their users. 
+Apillon also has a direct use case with the DID Vault, we are planning to integrate Vault into our own platform, allowing developers building on Apillon, to utilise Vault authentication from the first version of their product, with seamless integration into rest of our infrastructure. 
+
+### Are there any other projects similar to yours in the Substrate / Polkadot / Kusama ecosystem?
+Only similar project could be the Sporran wallet, which also works with KILT generated DID's. 
+
   - If so, how is your project different?
+  Our project stil utilises the ful scope of DID's, but bypasses the requirement of Sporran wallet. At the moment Sporran wallet supports only DID use case and is not compatible with mobile apps, making the overall usability questionable.
   - If not, are there similar projects in related ecosystems?
+  Ethereum has a similar solution: https://www.kepler.xyz/
 
 ## Team :busts_in_silhouette:
 
 ### Team members
-
 - Name of team leader
 - Names of team members
 
