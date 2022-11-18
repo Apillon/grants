@@ -9,19 +9,26 @@
 ## Project Overview :page_facing_up:
 
 ### Overview
-This project will bring new service to the Web3 infrastructure: encrypted storage of KILT generated DID's. DID Vault is therefore a Web3, end to end encrypted way of storing users DID's, removing the need of DID local storage, management, usage of Sporran wallet, and opening up the possibility of DID usage in Web3 Mobile Apps. 
+This project will bring new service to the Web3 infrastructure: encrypted storage of KILT or any other Polkadot generated DID's. DID Vault is therefore a Web3, end to end encrypted way of storing users DID's, removing the need of DID local storage, management, usage of Sporran  wallet, and opening up the possibility of DID usage in Web3 Mobile Apps. 
 
 DID Vault is a layer higher than KILT, therefore the DID's are generated and managed 100% on KILT protocol, but once created the users may store DID's on DID Vault. 
 DID Vault also enables integration to other Web3 services, allowing users to login with their DID without the need of any wallets, DID.json files and other friction, which is currently present. 
 
-Apillon Team is heavily interested in building this project because we are building a Web3 development platform, which provides a simple SDK for building on top of KILT + CRUST + PHALA and other parachains that make sense within the Web3 context.  On Apillon, developers will be able to utilise the Authentication service to generate DID's for their end users on KILT. In order for adoption to happen, we want to make the use of wallets optional in the authentication and DID management process, while still allow users to fully utilise their DID's. In order to achieve that, we need to develop an end to end encrypted DID Vault within our platform and at the same time make it a standalone open source project for anyone to use and speed up the Web3 adoption. 
+Apillon Team is heavily motivated to build this project because we are building a Web3 development platform, which provides a simple SDK for building on top of KILT + CRUST + PHALA and other parachains that make sense within the Web3 context.  On Apillon, developers will be able to utilise the Authentication service to generate DID's for their end users on KILT. 
+
+In order for adoption to happen, we want to make the use of wallets optional in the authentication and DID management process, while still allow users to fully utilise their DID's. In order to achieve that, we need to develop an end to end encrypted DID Vault within our platform and at the same time make it a standalone open source project for anyone to use and speed up the Web3 adoption. 
+
+Conclusion: 
+DID Vault becomes an open source, Polkadot based solution that keeps all Web 3 concepts, and still removes the friction and speeds up the adoption of underlying Parachains and Polkadot ecosystem as a whole. 
 
 ### Challenge
-KILT protocol offers top level Web3 authentication and ID generation, but besides Sporran wallet, there are no friction-less ways for users to utilise their credentials. Even though Sporran wallet is fully functional, it represents “another wallet” in a series of wallets that Web3 users have to obtain using different services, which causes not only friction to onboard such users, but at the same time it increases the risk of data loss or loss of access. There is also a high chance users who obtain digital identities, will store those on centralised servers, like Dropbox or Google Drive. 
+KILT protocol offers top level Web3 authentication and DID generation, but besides Sporran wallet, there are no friction-less ways for users to utilise their credentials. 
 
+Even though Sporran wallet is fully functional, it represents “another wallet” in a series of wallets that Web3 users have to obtain using different services, which causes not only friction to onboard such users, but at the same time it increases the risk of data loss or loss of access.
+
+There is also a high chance users who obtain digital identities, will store those on centralised servers, like Dropbox or Google Drive. Lastly, mandatory wallets complicate the usage in mobile native apps. 
 
 ### Project Details
-
 We expect the teams to already have a solid idea about your project's expected final state. Therefore, we ask the teams to submit (where relevant):
 
 #### UI and Flow Design
@@ -34,18 +41,16 @@ https://www.figma.com/file/eTbGFYefjg5SGuipWKkeB1/Kilt?node-id=0%3A1
 #### Flow description step by step
 
 ### DID Creation, attestation, encryption and storage - Diagram 1
-
 1.  User creates account (Email + Pass)
 2.  Hashing happens in the browser (client side)
 3.  Apillon layer - Account is created in a central database, but all the data is already encrypted, coming from client side
 4.  Generates email - This is the start of attestation, this actually sends a transactional email to the user. Once confirmed the attestation is passed. ,
-5.  DID - Full DID is issued on the KILT protocol - financed by the Apillon attester
-6.  Attested credentials are sent to the client via our servers, which means the file is temporarily saved on our server - We are still looking how to optimise this step or upgrade it with specific solution to bypass our servers
-7.  Once the file is back at the client side, it is encrypted using the users strong password
+5.  DID - Full DID is issued on the KILT protocol - financed by the Apillon as the Atester
+6.  Attested credentials are sent to the client directly from the chain.
+7.  Once the file is received at the client side, it is encrypted using the users strong password + email
 8.  Once encrypted, the file is sent to Apillon server and stored
 
 ### Diagram 2 - Login scenario
-
 1.  User initiates the login process
 2.  User sends us email + hashed password
 3.  We check the email + password match (up till here this is typical login scenario)
@@ -54,8 +59,7 @@ https://www.figma.com/file/eTbGFYefjg5SGuipWKkeB1/Kilt?node-id=0%3A1
 6.  Once decrypted, user can operate with the DID as expected from DID functionality
 7.  DID is then validated and or used
 
-### Diagram 3 - Social account recovery system
-
+### Diagram 3 - Social account recovery system - Optional
 1.  User that already created DID in the previous step, now has the ability to add the recovery system to their DID by logging in successfully with the DID in adding a recovery trustee/buddy account
 2.  In this scenario private/public keys are generated from the strong password and the public key is stored in our vault and associated with this specific user.
 3.  Users may encrypt the strong password with the public key from the buddy and we store the encrypted password, allowing the initial user to recover lost DID using their trustee or buddy that was previously assigned to recover.
@@ -69,13 +73,27 @@ In the case user actually forgets the password the flow is the following:
 #TODO 
 
 #### 2 phases of development
-Project is organised in two phases. First phase works as a proof of concept where we implement DID Vault as an end to end encrypted **centralised** solution, inteded for testing purposes only. Once the centralised DID Vault is developed and has an ability to integrate with other Web3 services, we are starting the Phase two of the project where we swap out the centralised way of DID storage with either: 
-- Phala Phat Contract
-- IPFS + encryption storage
-- CESS (native encryption storage)
-- Smart contract solution
+The project is organised in two phases. 
 
-Second Phase requires a lot of research between all possible solutions in order to find the best one (best being the one with strongest Web3 use case and expected performance). First phase of implementation is therefore planned as an MVP, a Proof of Concept on which we can then build if it proves to be as demanded as it appears. We are also planning to file a Level 3 grant proposal once Phase 1 is concluded. 
+**Phase 1**
+In phase 1 we are going to deliver the following: 
+1. UI for Vault, where users can upload their existing DID's, encrypt them and store them to the Vault
+2. Client side encryption
+3. Sending encrypted DID's to IPFS
+4. Login with "DID Vault" functionality as a proof of concept
+5. Functionality that pulls encrypted DID from the IPFS to the browser/client and is then decrypted with user password
+
+This specific Grant application is intended only for Phase 1, which takes us to the usable proof of concept, of working Web 3 DID Vault. 
+
+Phase 2 is planned as an upgrade at a later time and it upgrades the DID storage and retrieval significantly by implementing Phala Phat Contract. 
+
+
+**Phase 2**
+In phase 2 we are going to deliver the following: 
+- UI upgrade, where users can also generate DID's and immediately push them to the Vault (phase 1)
+- Upgrade the storage of DID's from IPFS to Phala Phat Contract (proof of concept tested already)
+- Social Recovery methods for additional recovery options
+
 
 
 What is included in the package: 
@@ -97,28 +115,34 @@ Help us locate your project in the Polkadot/Substrate/Kusama landscape and what 
 Project upgrades the existing DID solution as provided by KILT (ecosystem parachain) with a friction free, yet full Web3 compatible solution, that simplifies DID usage and speeds up DID authentication for all services using DID's, within Polkadot ecosystem, as well as for potential users. Giving simple access to DID's to mass of users, directly affects the adoption of all underlying services on Polkadot. 
 
 ### Who is your target audience (parachain/dapp/wallet/UI developers, designers, your own user base, some dapp's userbase, yourself)?
-DID Vault targets all Web3 projects and their users. Anyone developing a Web3 project or a dApp that is planning to use or already using KILT network for identity generation, management and authentication, may integrate DID vault to improve the authentication user experience and immediately speed up the onboarding of their users. 
-Apillon also has a direct use case with the DID Vault, we are planning to integrate Vault into our own platform, allowing developers building on Apillon, to utilise Vault authentication from the first version of their product, with seamless integration into rest of our infrastructure. 
+DID Vault targets all Web3 projects and their users. Anyone developing a Web3 project or a dApp that is planning to use or already using KILT network (or any other DID standard) for identity generation, management and authentication, may integrate DID vault to improve the authentication user experience and immediately speed up the onboarding of their users. 
+
+Apillon also has a direct use case with the DID Vault, we are planning to integrate the Vault into our own platform, allowing developers building on Apillon, to utilise Vault authentication from the first version of their product, with seamless integration into rest of our infrastructure. 
 
 ### Are there any other projects similar to yours in the Substrate / Polkadot / Kusama ecosystem?
 Only similar project could be the Sporran wallet, which also works with KILT generated DID's. 
 
   - If so, how is your project different?
-  Our project stil utilises the ful scope of DID's, but bypasses the requirement of Sporran wallet. At the moment Sporran wallet supports only DID use case and is not compatible with mobile apps, making the overall usability questionable.
+  Our project still utilises the full scope of DID's, but bypasses the requirement of Sporran wallet. At the moment Sporran wallet supports only DID use case and is not compatible with mobile apps, making the overall usability limited.
+  
   - If not, are there similar projects in related ecosystems?
   Ethereum has a similar solution: https://www.kepler.xyz/
 
 ## Team :busts_in_silhouette:
 
 ### Team members
-- Name of team leader
-- Names of team members
+- Team lead: Nino Kutnjak
+- Names of team members:
+	- Tadej Vengust
+	- Mitja Kjuder
+	- Luka Golinar
+	
 
 ### Contact
 
-- **Contact Name:** Full name of the contact person in your team
-- **Contact Email:** Contact email (e.g. john@duo.com)
-- **Website:** Your website
+- **Contact Name:** Ninoslav Kutnjak
+- **Contact Email:** nino.kutnjak@apillon.io
+- **Website:** apillon.io
 
 ### Legal Structure
 
@@ -126,10 +150,8 @@ Only similar project could be the Sporran wallet, which also works with KILT gen
 - **Registered Legal Entity:** Name of your registered legal entity, if available. (e.g. Duo Ltd.)
 
 ### Team's experience
+*Someone should list some of Kalmia previous crypto projects here? *
 
-Please describe the team's relevant experience. If your project involves development work, we would appreciate it if you singled out a few interesting projects or contributions made by team members in the past. For research-related grants, references to past publications and projects in a related domain are helpful.
-
-If anyone on your team has applied for a grant at the Web3 Foundation previously, please list the name of the project and legal entity here.
 
 ### Team Code Repos
 
@@ -156,6 +178,9 @@ If you've already started implementing your project or it is part of a larger re
 - references to conversations you might have had related to this project with anyone from the Web3 Foundation,
 - previous interface iterations, such as mock-ups and wireframes.
 
+
+#TODO 
+
 ## Development Roadmap :nut_and_bolt:
 
 This section should break the development roadmap down into milestones and deliverables. To assist you in defining it, we have created a document with examples for some grant categories [here](../docs/grant_guidelines_per_category.md). Since these will be part of the agreement, it helps to describe _the functionality we should expect in as much detail as possible_, plus how we can verify and test that functionality. Whenever milestones are delivered, we refer to this document to ensure that everything has been delivered as expected.
@@ -166,43 +191,60 @@ Below we provide an **example roadmap**. In the descriptions, it should be clear
 
 ### Overview
 
-- **Total Estimated Duration:** Duration of the whole project (e.g. 2 months)
-- **Full-Time Equivalent (FTE):**  Average number of full-time employees working on the project throughout its duration (see [Wikipedia](https://en.wikipedia.org/wiki/Full-time_equivalent), e.g. 2 FTE)
-- **Total Costs:** Requested amount in USD for the whole project (e.g. 12,000 USD). Note that the acceptance criteria and additional benefits vary depending on the [level](../README.md#level_slider-levels) of funding requested. This and the costs for each milestone need to be provided in USD; if the grant is paid out in Bitcoin, the amount will be calculated according to the exchange rate at the time of payment.
+- **Total Estimated Duration:** 2 months
+- **Full-Time Equivalent (FTE):**  4 FTE
+- **Total Costs:** 28,000 USD
 
-### Milestone 1 Example — Basic functionality
+
+### Milestone 1  — UI, upload and encrypt
 
 - **Estimated duration:** 1 month
-- **FTE:**  1,5
-- **Costs:** 8,000 USD
+- **FTE:** 4
+- **Costs:** 14,000 USD
 
-> :exclamation: **The default deliverables 0a-0d below are mandatory for all milestones**, and deliverable 0e at least for the last one. If you do not intend to deliver one of these, please state a reason in its specification (e.g. Milestone X is research oriented and as such there is no code to test).
 
 | Number | Deliverable | Specification |
+
 | -----: | ----------- | ------------- |
+
 | **0a.** | License | Apache 2.0 / GPLv3 / MIT / Unlicense |
+
 | **0b.** | Documentation | We will provide both **inline documentation** of the code and a basic **tutorial** that explains how a user can (for example) spin up one of our Substrate nodes and send test transactions, which will show how the new functionality works. |
+
 | **0c.** | Testing and Testing Guide | Core functions will be fully covered by comprehensive unit tests to ensure functionality and robustness. In the guide, we will describe how to run these tests. |
+
 | **0d.** | Docker | We will provide a Dockerfile(s) that can be used to test all the functionality delivered with this milestone. |
-| 0e. | Article | We will publish an **article**/workshop that explains [...] (what was done/achieved as part of the grant). (Content, language and medium should reflect your target audience described above.) |
-| 1. | Substrate module: X | We will create a Substrate module that will... (Please list the functionality that will be implemented for the first milestone. You can refer to details provided in previous sections.) |
-| 2. | Substrate module: Y | The Y Substrate module will... |
-| 3. | Substrate module: Z | The Z Substrate module will... |
-| 4. | Substrate chain | Modules X, Y & Z of our custom chain will interact in such a way... (Please describe the deliverable here as detailed as possible) |
-| 5. | Library: ABC | We will deliver a JS library that will implement the functionality described under "ABC Library" |
-| 6. | Smart contracts: ... | We will deliver a set of ink! smart contracts that will...
+
+| 1. | Web app UI | We will build and publish the UI for DID Vault and enable client side upload + encryption of DID Vaults|
 
 
-### Milestone 2 Example — Additional features
 
-- **Estimated Duration:** 1 month
-- **FTE:**  1,5
-- **Costs:** 8,000 USD
+### Milestone 2 - Store to IPFS, retrieve and decrypt
 
-...
+- **Estimated duration:** 1 month
+- **FTE:** 4
+- **Costs:** 14,000 USD
+
+| Number | Deliverable | Specification |
+
+| -----: | ----------- | ------------- |
+
+| **0a.** | License | Apache 2.0 / GPLv3 / MIT / Unlicense |
+
+| **0b.** | Documentation | We will provide both **inline documentation** of the code and a basic **tutorial** that explains how a user can (for example) spin up one of our Substrate nodes and send test transactions, which will show how the new functionality works. |
+
+| **0c.** | Testing and Testing Guide | Core functions will be fully covered by comprehensive unit tests to ensure functionality and robustness. In the guide, we will describe how to run these tests. |
+
+| **0d.** | Docker | We will provide a Dockerfile(s) that can be used to test all the functionality delivered with this milestone. |
+
+| 0e. | Article | We will publish an online video explaining how to use Vault for DID encryption and storage for users who already have DID's. |
+
+| 1. | Fully functional backend | We will build and deploy beta ready DID Vault, where users will be able to upload, encrypt and store their DID's and use them to login to integrated services. |
 
 
 ## Future Plans
+Immediately after milestones from this Grant are met, we are going to file the second grant that upgrades the proof of concept to a production ready full Web 3 DID Vault with additional functionalities, like DID generation, storage and integration with other services. 
+
 
 Please include here
 
@@ -212,7 +254,9 @@ Please include here
 
 ## Additional Information :heavy_plus_sign:
 
-**How did you hear about the Grants Program?** Web3 Foundation Website / Medium / Twitter / Element / Announcement by another team / personal recommendation / etc.
+**How did you hear about the Grants Program?** 
+We learned about the Grants Program on first Polkadot event in Slovenia in the lecture held by Urban Osvald. 
+
 
 Here you can also add any additional information that you think is relevant to this application but isn't part of it already, such as:
 

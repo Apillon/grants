@@ -20,7 +20,7 @@ In this project, we will build NFT marketplace, fully compatible with Apillon an
 While building this one click installation package, we will record a step by step Video series course, that takes the user from 0 lines of code to a working NFT marketplace. 
 
 Includes: 
-- 1 clic installation NFT Marketplace on Apillon
+- 1 click installation NFT Marketplace on Apillon
 - Smart contracts automatically deployed on Moonbeam and Astar
 - Future seampless upgrades for NFT marketplace
 - A full step by step video course with open source code, english voiceover and all the materials needed to build such NFT marketplace
