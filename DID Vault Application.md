@@ -195,6 +195,26 @@ Below we provide an **example roadmap**. In the descriptions, it should be clear
 - **Full-Time Equivalent (FTE):**  4 FTE
 - **Total Costs:** 28,000 USD
 
+1 dev = 7.000EUR/month
+4 devi
+2 meseca duration, 2 Milestona
+total = 2 x 4 x 7.000 = 28.000eur
+
+Ali je bil project management v preteklosti vključen? 
+
+V kolikor moraš dodati project management, zmanjšaš plače na 6k in dodaš project management da padeš na total 28k. 
+
+Alternative setup:
+
+Development:
+3ČM: 
+- 2.25 BE
+- 0.75 FE
+
+0.5ČM - UX
+0.5ČM - PM
+
+
 
 ### Milestone 1  — UI, upload and encrypt
 
@@ -243,7 +263,9 @@ Below we provide an **example roadmap**. In the descriptions, it should be clear
 
 
 ## Future Plans
-Immediately after milestones from this Grant are met, we are going to file the second grant that upgrades the proof of concept to a production ready full Web 3 DID Vault with additional functionalities, like DID generation, storage and integration with other services. 
+Immediately after milestones from this Grant are 
+
+
 
 
 Please include here
@@ -259,6 +281,16 @@ We learned about the Grants Program on first Polkadot event in Slovenia in the l
 
 
 Here you can also add any additional information that you think is relevant to this application but isn't part of it already, such as:
+
+
+### Previous relevant experience
+Apillon's first production ready release was back in XXXX and it was an on chain solution for data integrity. #TODO 
+
+This release is relevant to show the team understands and knows how to develop encryption based solutions using blockchain. 
+
+The data integrity module was successfully implemented with the following companies: 
+#TODO 
+
 
 - Work you have already done.
 - If there are any other teams who have already contributed (financially) to the project.
