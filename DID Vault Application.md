@@ -196,26 +196,6 @@ Below we provide an **example roadmap**. In the descriptions, it should be clear
 - **Full-Time Equivalent (FTE):**  4 FTE
 - **Total Costs:** 28,000 USD
 
-1 dev = 7.000EUR/month
-4 devi
-2 meseca duration, 2 Milestona
-total = 2 x 4 x 7.000 = 28.000eur
-
-Ali je bil project management v preteklosti vključen? 
-
-V kolikor moraš dodati project management, zmanjšaš plače na 6k in dodaš project management da padeš na total 28k. 
-
-Alternative setup:
-
-Development:
-3ČM: 
-- 2 BE
-- 1 FE
-
-0.5ČM - UX
-0.5ČM - PM
-
-
 
 ### Milestone 1  — UI, upload and encrypt
 
@@ -265,9 +245,6 @@ Development:
 
 ## Future Plans
 Immediately after milestones from this Grant are 
-
-
-
 
 Please include here
 
