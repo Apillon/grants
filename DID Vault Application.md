@@ -9,9 +9,9 @@
 ## Project Overview :page_facing_up:
 
 ### Overview
-This project will bring new service to the Web3 infrastructure: encrypted storage of KILT or any other Polkadot generated DID's. DID Vault is therefore a Web3, end to end encrypted way of storing users DID's, removing the need of DID local storage, management, usage of Sporran  wallet, and opening up the possibility of DID usage in Web3 Mobile Apps. 
+This project will bring new service to the Web3 infrastructure: encrypted storage of KILT or any other Polkadot generated DID credentials. DID Vault is therefore a Web3, end to end encrypted way of storing user DID credentials, removing the need of DID local storage, management, usage of Sporran  wallet, and opening up the possibility of DID usage in Web3 Mobile Apps. 
 
-DID Vault is a layer higher than KILT, therefore the DID's are generated and managed 100% on KILT protocol, but once created the users may store DID's on DID Vault. 
+DID Vault is a layer higher than KILT, therefore the DID's are generated and managed 100% on KILT protocol, but once created the users may store DID credentials in DID Vault. 
 DID Vault also enables integration to other Web3 services, allowing users to login with their DID without the need of any wallets, DID.json files and other friction, which is currently present. 
 
 Apillon Team is heavily motivated to build this project because we are building a Web3 development platform, which provides a simple SDK for building on top of KILT + CRUST + PHALA and other parachains that make sense within the Web3 context.  On Apillon, developers will be able to utilise the Authentication service to generate DID's for their end users on KILT. 
@@ -42,12 +42,12 @@ https://www.figma.com/file/eTbGFYefjg5SGuipWKkeB1/Kilt?node-id=0%3A1
 
 ### DID Creation, attestation, encryption and storage - Diagram 1
 1.  User creates account (Email + Pass)
-2.  Hashing happens in the browser (client side)
+2.  Hashing and encryption happens in the browser (client side)
 3.  Apillon layer - Account is created in a central database, but all the data is already encrypted, coming from client side
-4.  Generates email - This is the start of attestation, this actually sends a transactional email to the user. Once confirmed the attestation is passed. ,
-5.  DID - Full DID is issued on the KILT protocol - financed by the Apillon as the Atester
-6.  Attested credentials are sent to the client directly from the chain.
-7.  Once the file is received at the client side, it is encrypted using the users strong password + email
+4.  Generates email - This is the start of attestation, this actually sends a transactional email to the user. Once confirmed the attestation is passed. This is a normal attestation step that follows the KILT protocol. Multiple attestation options shall be available with email as first.
+5.  DID - Full DID is issued on the KILT protocol - financed by the Apillon as the Attester
+6.  Attested credentials are sent to the client from the Attester.
+7.  Once the file is received at the client side, it is encrypted using the users strong password
 8.  Once encrypted, the file is sent to Apillon server and stored
 
 ### Diagram 2 - Login scenario
@@ -57,7 +57,8 @@ https://www.figma.com/file/eTbGFYefjg5SGuipWKkeB1/Kilt?node-id=0%3A1
 4.  If the login is passed, the encrypted DID is sent to the client
 5.  Encrypted DID is decrypted using users “strong password”
 6.  Once decrypted, user can operate with the DID as expected from DID functionality
-7.  DID is then validated and or used
+7.  This part from the UI perspective and dev integration in websites works the same way as google login.
+8.  DID is then validated and or used
 
 ### Diagram 3 - Social account recovery system - Optional
 1.  User that already created DID in the previous step, now has the ability to add the recovery system to their DID by logging in successfully with the DID in adding a recovery trustee/buddy account
@@ -77,7 +78,7 @@ The project is organised in two phases.
 
 **Phase 1**
 In phase 1 we are going to deliver the following: 
-1. UI for Vault, where users can upload their existing DID's, encrypt them and store them to the Vault
+1. UI for Vault, where users can encrypt and upload their existing DID's storing them in the Vault
 2. Client side encryption
 3. Sending encrypted DID's to IPFS
 4. Login with "DID Vault" functionality as a proof of concept
@@ -91,7 +92,7 @@ Phase 2 is planned as an upgrade at a later time and it upgrades the DID storage
 **Phase 2**
 In phase 2 we are going to deliver the following: 
 - UI upgrade, where users can also generate DID's and immediately push them to the Vault (phase 1)
-- Upgrade the storage of DID's from IPFS to Phala Phat Contract (proof of concept tested already)
+- Upgrade the centralized computation power to Phala Phat Contract (proof of concept tested already)
 - Social Recovery methods for additional recovery options
 
 
@@ -208,8 +209,8 @@ Alternative setup:
 
 Development:
 3ČM: 
-- 2.25 BE
-- 0.75 FE
+- 2 BE
+- 1 FE
 
 0.5ČM - UX
 0.5ČM - PM
