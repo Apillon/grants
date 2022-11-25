@@ -300,7 +300,7 @@ The data integrity module was successfully implemented with the following compan
 - IBO GmbH (https://www.ibo-tec.de/en/)
 - Hypex (https://hypex.si/en)
 
-For that we've succesfully obtained two EU grants:
+In the past we've also succesfully obtained two EU open call grants:
 
 - Blockpool: https://blockpool.eu/25-selected-smes/kalmia-2/
 - FED4SAE: https://fed4sae.eu/success-stories/betp/
