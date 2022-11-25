@@ -1,7 +1,7 @@
 # DID Vault
 
-- **Team Name:** Apillon.io **(company LTD)**
-- **Payment Address:** BTC, Ethereum (USDT/USDC/DAI) or Polkadot/Kusama (aUSD) payment address. Please also specify the currency. (e.g. 0x8920... (DAI))
+- **Team Name:** Apillon
+- **Payment Address:** Ethereum address: (USDC)
 - **[Level](https://github.com/w3f/Grants-Program/tree/master#level_slider-levels):** 2
 
 > :exclamation: *The combination of your GitHub account submitting the application and the payment address above will be your unique identifier during the program. Please keep them safe.*
@@ -9,7 +9,7 @@
 ## Project Overview :page_facing_up:
 
 ### Overview
-This project will bring new service to the Web3 infrastructure: encrypted storage of KILT or any other Polkadot generated DID credentials. DID Vault is therefore a Web3, end to end encrypted way of storing user DID credentials, removing the need of DID local storage, management, usage of Sporran  wallet, and opening up the possibility of DID usage in Web3 Mobile Apps. 
+With this project we will implement DID Vault for Polkadot ecosystem. This will be a new service within the existing Web3 infrastructure. It will provide an encrypted storage of KILT or any other future Polkadot generated DID credentials. DID Vault is therefore a Web3, end to end encrypted way of storing user DID credentials, removing the need of DID local storage, management, usage of Sporran  wallet, and opening up the possibility of DID usage in future Web3 applications (mobile & web). 
 
 DID Vault is a layer higher than KILT, therefore the DID's are generated and managed 100% on KILT protocol, but once created the users may store DID credentials in DID Vault. 
 DID Vault also enables integration to other Web3 services, allowing users to login with their DID without the need of any wallets, DID.json files and other friction, which is currently present. 
@@ -17,9 +17,6 @@ DID Vault also enables integration to other Web3 services, allowing users to log
 Apillon Team is heavily motivated to build this project because we are building a Web3 development platform, which provides a simple SDK for building on top of KILT + CRUST + PHALA and other parachains that make sense within the Web3 context.  On Apillon, developers will be able to utilise the Authentication service to generate DID's for their end users on KILT. 
 
 In order for adoption to happen, we want to make the use of wallets optional in the authentication and DID management process, while still allow users to fully utilise their DID's. In order to achieve that, we need to develop an end to end encrypted DID Vault within our platform and at the same time make it a standalone open source project for anyone to use and speed up the Web3 adoption. 
-
-Conclusion: 
-DID Vault becomes an open source, Polkadot based solution that keeps all Web 3 concepts, and still removes the friction and speeds up the adoption of underlying Parachains and Polkadot ecosystem as a whole. 
 
 ### Challenge
 KILT protocol offers top level Web3 authentication and DID generation, but besides Sporran wallet, there are no friction-less ways for users to utilise their credentials. 
@@ -32,6 +29,7 @@ There is also a high chance users who obtain digital identities, will store thos
 We expect the teams to already have a solid idea about your project's expected final state. Therefore, we ask the teams to submit (where relevant):
 
 #### UI and Flow Design
+
 https://www.figma.com/file/85PjhVTfEUlG9BnxTRoKNE/AT-Wireframes-v0.1?node-id=22%3A2118&t=SHcbVz9BnbahAGLG-1
 
 https://drive.google.com/file/d/15W8S1QzJ_rI5mhH155PoF93S7HGG1Yid/view?usp=sharing
@@ -72,8 +70,21 @@ In the case user actually forgets the password the flow is the following:
 2.  We confirm the identity of the user via support
 3.  If confirmed the key is unlocked with two steps, first decryption happens via Apillon keys and the second from the users Buddy system
 
-#### Data models
-#TODO 
+#### Technology stack
+Technology stack consists of established mainstream web technologies that will enable large number of web developers to use and contribute to the project later on:
+
+- javascript (typescript)
+- rust (ink)
+- vuejs
+- nuxt
+
+Additionally next SDKs and clients will be used:
+- polkadot sdk
+- kilt sdk
+- crustio sdk
+- ipfs client
+- phala sdk
+
 
 #### 2 phases of development
 The project is organised in two phases. 
@@ -153,8 +164,20 @@ Only similar project could be the Sporran wallet, which also works with KILT gen
 - **Registered Legal Entity:** Name of your registered legal entity, if available. (e.g. Duo Ltd.)
 
 ### Team's experience
-*Someone should list some of Kalmia previous crypto projects here? *
-
+Tadej Vengust is experienced Web3 developer and team lead that worked on a number of projects since 2017. Some of the most important are:
+-   0xcert framework - open source SDK for NFT management - [https://github.com/0xcert/framework](https://github.com/0xcert/framework)
+-   Official ERC721 reference implementation - [https://github.com/nibbstack/erc721](https://github.com/nibbstack/erc721)
+-   Genobank (BIO NFTs) - [https://github.com/Genobank/biosample-permission-token](https://github.com/Genobank/biosample-permission-token)
+-   ERC721 contract validator - [https://github.com/nibbstack/erc721-validator](https://github.com/nibbstack/erc721-validator)
+-   Specron - smart contract testing environment - [https://github.com/specron](https://github.com/specron)
+-   [Hiveterminal](https://www.hiveterminal.com/) - factoring platform
+-   [https://credentify.eu/](https://credentify.eu/) - blockchain-secured stackable ECTS
+-   AVL - Ensuring product authenticity through verifiable production data.
+-   Iskratel - Reducing the risk of complaints through accurate compliance data.
+-   IBO - Improving production process infrastructure with data traceability.
+Tadej is a lead architect for Apillon platform.
+Luka Golinar is Apillon backend developer taking care of KILT integration from research to inplementation. 
+Mitja Kjuder has years of experience in smart contracts and backend development. He has implemented a number of smart contracts for various DeFi and NFT projects audited by top audit  service providers.
 
 ### Team Code Repos
 
@@ -181,8 +204,10 @@ If you've already started implementing your project or it is part of a larger re
 - references to conversations you might have had related to this project with anyone from the Web3 Foundation,
 - previous interface iterations, such as mock-ups and wireframes.
 
+We've done initial interviews with a number of stakeholders within the Polkadot ecosystem in order to get feedback on the relevance of the DID Vault for the ecosystem. The common feedback was very positive and amphasized the need for proposed solution.
 
-#TODO 
+In next step we've done initial hand in hand research with the KILT team evaluating the technical viability. Based on that we've defined three main user stories (https://github.com/Apillon-web3/grants/blob/main/Grant_Assets/vault_technical_diagram.png) and prepared initial wireframes (https://www.figma.com/file/85PjhVTfEUlG9BnxTRoKNE/AT-Wireframes-v0.1?node-id=22%3A2118&t=aV8m9lIf3TPV6fty-0).
+
 
 ## Development Roadmap :nut_and_bolt:
 
@@ -264,13 +289,20 @@ Here you can also add any additional information that you think is relevant to t
 
 
 ### Previous relevant experience
-Apillon's first production ready release was back in XXXX and it was an on chain solution for data integrity. #TODO 
+Apillon's (Authtrail at that time) first production ready release was back in 2018 and it was an on chain solution for large scale data integrity. Solution worked as L2 while our goal was to handle large amount of structured and unstructured enterprise data. Main use cases were trusted product traceability and audit trails data integrity.
 
-This release is relevant to show the team understands and knows how to develop encryption based solutions using blockchain. 
+At first Ethereum network was chosen but later on we've decided switching to Moonbeam as we've recognized a great potential in Polkadot ecosystem. This release is relevant to show the team understands and knows how to develop encryption based solutions using blockchain. 
 
 The data integrity module was successfully implemented with the following companies: 
-#TODO 
+- AVL List GmbH (https://www.avl.com)
+- S&T Iskratel (https://www.iskratel.com)
+- IBO GmbH (https://www.ibo-tec.de/en/)
+- Hypex (https://hypex.si/en)
 
+For that we've succesfully obtained two EU grants:
+
+- Blockpool: https://blockpool.eu/25-selected-smes/kalmia-2/
+- FED4SAE: https://fed4sae.eu/success-stories/betp/
 
 - Work you have already done.
 - If there are any other teams who have already contributed (financially) to the project.
