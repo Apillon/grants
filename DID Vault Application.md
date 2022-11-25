@@ -175,6 +175,7 @@ Tadej Vengust is experienced Web3 developer and team lead that worked on a numbe
 -   AVL - Ensuring product authenticity through verifiable production data.
 -   Iskratel - Reducing the risk of complaints through accurate compliance data.
 -   IBO - Improving production process infrastructure with data traceability.
+-   ESTIMATEGAS - live testing smart contracts -  https://github.com/fulldecent/live-testing-with-estimateGas/
 Tadej is a lead architect for Apillon platform.
 Luka Golinar is Apillon backend developer taking care of KILT integration from research to inplementation. 
 Mitja Kjuder has years of experience in smart contracts and backend development. He has implemented a number of smart contracts for various DeFi and NFT projects audited by top audit  service providers.
