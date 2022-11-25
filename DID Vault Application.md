@@ -40,6 +40,8 @@ https://www.figma.com/file/eTbGFYefjg5SGuipWKkeB1/Kilt?node-id=0%3A1
 
 #### Flow description step by step
 
+![technical diagram](https://github.com/Apillon-web3/grants/blob/main/Grant_Assets/vault_technical_diagram.png)
+
 ### DID Creation, attestation, encryption and storage - Diagram 1
 1.  User creates account (Email + Pass)
 2.  Hashing and encryption happens in the browser (client side)
