@@ -1,10 +1,8 @@
 # DID Vault
 
-- **Team Name:** Apillon
+- **Team Name:** Apillon, AUTHTRAIL Pte. Ltd. I 68 Circular Road, #02-01, 049422, Singapore
 - **Payment Address:** Ethereum address: (USDC)
 - **[Level](https://github.com/w3f/Grants-Program/tree/master#level_slider-levels):** 2
-
-> :exclamation: *The combination of your GitHub account submitting the application and the payment address above will be your unique identifier during the program. Please keep them safe.*
 
 ## Project Overview :page_facing_up:
 
@@ -29,16 +27,20 @@ There is also a high chance users who obtain digital identities, will store thos
 We expect the teams to already have a solid idea about your project's expected final state. Therefore, we ask the teams to submit (where relevant):
 
 #### UI and Flow Design
+![lander](https://github.com/Apillon-web3/grants/blob/main/Grant_Assets/vault_ui_prototype/first_view.png)
+![Step 0](https://github.com/Apillon-web3/grants/blob/main/Grant_Assets/vault_ui_prototype/view_0.png)
+![Step 1](https://github.com/Apillon-web3/grants/blob/main/Grant_Assets/vault_ui_prototype/view_1.png)
+![Step 2](https://github.com/Apillon-web3/grants/blob/main/Grant_Assets/vault_ui_prototype/view_2.png)
+![Step 3](https://github.com/Apillon-web3/grants/blob/main/Grant_Assets/vault_ui_prototype/view_3.png)
+![Step 4](https://github.com/Apillon-web3/grants/blob/main/Grant_Assets/vault_ui_prototype/view_4.png)
+![Step 5](https://github.com/Apillon-web3/grants/blob/main/Grant_Assets/vault_ui_prototype/view_5.png)
+![Step 6](https://github.com/Apillon-web3/grants/blob/main/Grant_Assets/vault_ui_prototype/vault_ui_prototype/view_6.png)
+![Step 7](https://github.com/Apillon-web3/grants/blob/main/Grant_Assets/vault_ui_prototype/view_7.png)
 
-https://www.figma.com/file/85PjhVTfEUlG9BnxTRoKNE/AT-Wireframes-v0.1?node-id=22%3A2118&t=SHcbVz9BnbahAGLG-1
-
-https://drive.google.com/file/d/15W8S1QzJ_rI5mhH155PoF93S7HGG1Yid/view?usp=sharing
-
-https://www.figma.com/file/eTbGFYefjg5SGuipWKkeB1/Kilt?node-id=0%3A1
 
 #### Flow description step by step
 
-![technical diagram](https://github.com/Apillon-web3/grants/blob/main/Grant_Assets/vault_technical_diagram.png)
+![technical diagram](https://github.com/Apillon-web3/grants/blob/main/Grant_Assets/tech_diagram_3.png)
 
 ### DID Creation, attestation, encryption and storage - Diagram 1
 1.  User creates account (Email + Pass)
@@ -87,7 +89,11 @@ Additionally next SDKs and clients will be used:
 
 
 #### 2 phases of development
+
+![technical diagram](https://github.com/Apillon-web3/grants/blob/main/Grant_Assets/tech_diagram_1.png)
+
 The project is organised in two phases. 
+
 
 **Phase 1**
 In phase 1 we are going to deliver the following: 
@@ -108,21 +114,9 @@ In phase 2 we are going to deliver the following:
 - Upgrade the centralized computation power to Phala Phat Contract (proof of concept tested already)
 - Social Recovery methods for additional recovery options
 
-
-
-What is included in the package: 
-- designs of UI components: #addlink
-- technical backend flow: #addlink 
-- data models #missing
-- overview of technical stack: #addlink 
--  documentation of core components: #missing 
-- MVP link: #missing 
-
+![technical diagram](https://github.com/Apillon-web3/grants/blob/main/Grant_Assets/tech_diagram_2.png)
 
 ### Ecosystem Fit
-
-Help us locate your project in the Polkadot/Substrate/Kusama landscape and what problems it tries to solve by answering each of these questions:
-
 
 ### Where and how does your project fit into the ecosystem?
 
@@ -145,7 +139,7 @@ Only similar project could be the Sporran wallet, which also works with KILT gen
 ## Team :busts_in_silhouette:
 
 ### Team members
-- Team lead: Nino Kutnjak
+- Team lead: Ninoslav Kutnjak
 - Names of team members:
 	- Tadej Vengust
 	- Mitja Kjuder
@@ -153,18 +147,16 @@ Only similar project could be the Sporran wallet, which also works with KILT gen
 	
 
 ### Contact
-
 - **Contact Name:** Ninoslav Kutnjak
 - **Contact Email:** nino.kutnjak@apillon.io
 - **Website:** apillon.io
 
 ### Legal Structure
-
-- **Registered Address:** Address of your registered legal entity, if available. Please keep it in a single line. (e.g. High Street 1, London LK1 234, UK)
-- **Registered Legal Entity:** Name of your registered legal entity, if available. (e.g. Duo Ltd.)
+- **Registered Address:** 68 Circular Road, #02-01, 049422, Singapore
+- **Registered Legal Entity:** AUTHTRAIL Pte. Ltd. 
 
 ### Team's experience
-Tadej Vengust is experienced Web3 developer and team lead that worked on a number of projects since 2017. Some of the most important are:
+**Tadej Vengust** is experienced Web3 developer and team lead that worked on a number of projects since 2017. Some of the most important are:
 -   0xcert framework - open source SDK for NFT management - [https://github.com/0xcert/framework](https://github.com/0xcert/framework)
 -   Official ERC721 reference implementation - [https://github.com/nibbstack/erc721](https://github.com/nibbstack/erc721)
 -   Genobank (BIO NFTs) - [https://github.com/Genobank/biosample-permission-token](https://github.com/Genobank/biosample-permission-token)
@@ -176,47 +168,27 @@ Tadej Vengust is experienced Web3 developer and team lead that worked on a numbe
 -   Iskratel - Reducing the risk of complaints through accurate compliance data.
 -   IBO - Improving production process infrastructure with data traceability.
 -   ESTIMATEGAS - live testing smart contracts -  https://github.com/fulldecent/live-testing-with-estimateGas/
-Tadej is a lead architect for Apillon platform.
-Luka Golinar is Apillon backend developer taking care of KILT integration from research to inplementation. 
-Mitja Kjuder has years of experience in smart contracts and backend development. He has implemented a number of smart contracts for various DeFi and NFT projects audited by top audit  service providers.
-
-### Team Code Repos
-
-- https://github.com/<your_organisation>/<project_1>
-- https://github.com/<your_organisation>/<project_2>
-
-Please also provide the GitHub accounts of all team members. If they contain no activity, references to projects hosted elsewhere or live are also fine.
-
-- https://github.com/<team_member_1>
-- https://github.com/<team_member_2>
+**Tadej Vengust** is a lead architect for Apillon platform.
+**Luka Golinar** is Apillon backend developer taking care of KILT integration from research to inplementation. 
+**Mitja Kjuder** has years of experience in smart contracts and backend development. He has implemented a number of smart contracts for various DeFi and NFT projects audited by top audit  service providers.
 
 ### Team LinkedIn Profiles (if available)
 
-- https://www.linkedin.com/<person_1>
-- https://www.linkedin.com/<person_2>
+https://www.linkedin.com/in/nino-kutnjak/ <Nino Kutnjak>
+https://www.linkedin.com/in/tadej-vengust/ <Tadej Vengust>
+https://www.linkedin.com/in/luka-golinar-07b14415b/ <Luka Golinar>
+https://www.linkedin.com/in/mitja-kjuder-557641146/ <Mitja Kjuder>
 
-## Development Status :open_book:
-
-If you've already started implementing your project or it is part of a larger repository, please provide a link and a description of the code here. In any case, please provide some documentation on the research and other work you have conducted before applying. This could be:
-
-- links to improvement proposals or [RFPs](https://github.com/w3f/Grants-Program/tree/master/rfp-proposal) (requests for proposal),
-- academic publications relevant to the problem,
-- links to your research diary, blog posts, articles, forum discussions or open GitHub issues,
-- references to conversations you might have had related to this project with anyone from the Web3 Foundation,
-- previous interface iterations, such as mock-ups and wireframes.
+## Development Status 
 
 We've done initial interviews with a number of stakeholders within the Polkadot ecosystem in order to get feedback on the relevance of the DID Vault for the ecosystem. The common feedback was very positive and amphasized the need for proposed solution.
 
 In next step we've done initial hand in hand research with the KILT team evaluating the technical viability. Based on that we've defined three main user stories (https://github.com/Apillon-web3/grants/blob/main/Grant_Assets/vault_technical_diagram.png) and prepared initial wireframes (https://www.figma.com/file/85PjhVTfEUlG9BnxTRoKNE/AT-Wireframes-v0.1?node-id=22%3A2118&t=aV8m9lIf3TPV6fty-0).
 
 
-## Development Roadmap :nut_and_bolt:
+## Development Roadmap
 
-This section should break the development roadmap down into milestones and deliverables. To assist you in defining it, we have created a document with examples for some grant categories [here](../docs/grant_guidelines_per_category.md). Since these will be part of the agreement, it helps to describe _the functionality we should expect in as much detail as possible_, plus how we can verify and test that functionality. Whenever milestones are delivered, we refer to this document to ensure that everything has been delivered as expected.
 
-Below we provide an **example roadmap**. In the descriptions, it should be clear how your project is related to Substrate, Kusama or Polkadot. We _recommend_ that teams structure their roadmap as 1 milestone ≈ 1 month.
-
-> :exclamation: If any of your deliverables is based on somebody else's work, make sure you work and publish _under the terms of the license_ of the respective project and that you **highlight this fact in your milestone documentation** and in the source code if applicable! **Teams that submit others' work without attributing it will be immediately terminated.**
 
 ### Overview
 
@@ -272,22 +244,13 @@ Below we provide an **example roadmap**. In the descriptions, it should be clear
 
 
 ## Future Plans
-Immediately after milestones from this Grant are 
-
-Please include here
-
-- how you intend to use, enhance, promote and support your project in the short term, and
-- the team's long-term plans and intentions in relation to it.
+Immediately after milestones from this Grant are reached, the project is moving into Phase 2, upgrading the Vault to production grade standalone product everyone can use. 
 
 
 ## Additional Information :heavy_plus_sign:
 
 **How did you hear about the Grants Program?** 
 We learned about the Grants Program on first Polkadot event in Slovenia in the lecture held by Urban Osvald. 
-
-
-Here you can also add any additional information that you think is relevant to this application but isn't part of it already, such as:
-
 
 ### Previous relevant experience
 Apillon's (Authtrail at that time) first production ready release was back in 2018 and it was an on chain solution for large scale data integrity. Solution worked as L2 while our goal was to handle large amount of structured and unstructured enterprise data. Main use cases were trusted product traceability and audit trails data integrity.
