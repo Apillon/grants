@@ -1,6 +1,6 @@
 # DID Vault
 
-- **Team Name:** Apillon (AUTHTRAIL Pte. Ltd.)
+- **Team Name:** Apillon (Authtrail Pte. Ltd.)
 - **Payment Address:** Ethereum address: (USDC)
 - **[Level](https://github.com/w3f/Grants-Program/tree/master#level_slider-levels):** 2
 
