@@ -1,6 +1,6 @@
 # DID Vault
 
-- **Team Name:** Apillon, AUTHTRAIL Pte. Ltd. I 68 Circular Road, #02-01, 049422, Singapore
+- **Team Name:** Apillon (AUTHTRAIL Pte. Ltd.)
 - **Payment Address:** Ethereum address: (USDC)
 - **[Level](https://github.com/w3f/Grants-Program/tree/master#level_slider-levels):** 2
 
@@ -267,7 +267,3 @@ In the past we've also succesfully obtained two EU open call grants:
 
 - Blockpool: https://blockpool.eu/25-selected-smes/kalmia-2/
 - FED4SAE: https://fed4sae.eu/success-stories/betp/
-
-- Work you have already done.
-- If there are any other teams who have already contributed (financially) to the project.
-- Previous grants you may have applied for.
